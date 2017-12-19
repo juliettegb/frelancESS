@@ -1,0 +1,43 @@
+{
+  "name": "projet",
+  "version": "1.0.0",
+  "description": "Plateforme de recherche de missions pour freelances dans le secteur de l'ESS et du DD.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack & node server.js"
+  },
+  "keywords": [
+    "ESS",
+    "DD",
+    "Freelance",
+    "Association",
+    "Economie",
+    "Sociale",
+    "Solidaire",
+    "Développement",
+    "durable",
+    "Solidarité",
+    "ONG",
+    "startup"
+  ],
+  "author": "Manu et Juliette",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "framework7-react": "^0.9.3-2",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
+    "react-bootstrap-modal": "^4.0.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.10.0"
+  }
+}

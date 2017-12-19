@@ -1,0 +1,325 @@
+/***** HOMEPAGE *****/
+
+/* VIDEO BACKGROUND */
+
+body {
+  margin: 0;
+  background: #000;
+}
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  /*background: url('../assets/home.jpg') no-repeat;*/
+  background-color: white;
+  background-size: cover;
+  opacity: 0.7;
+  transition: 1s opacity;
+}
+/*
+.opacityVid {
+  background-color: black;
+  width: 100%;
+  opacity: 0.6;
+}*/
+.stopfade {
+   opacity: .5;
+}
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background:rgba(0,0,0,0.5);
+  padding: .5rem;
+  transition: .6s background;
+}
+a:hover{
+  background:rgba(0,0,0,0.9);
+}
+@media screen and (max-width: 500px) {
+  div{width:70%;}
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url('../assets/home.jpg') #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+.backgroundVideo {
+  background: fixed;
+}
+
+/* NAVBAR */
+
+/* #D3044D (fuschia foncé) et #DBE8E4/#D1E3DD (vert clair) et #2B816D (vert foncé) ou #3FC3A5 (vert punchy) ou #255176 (bleu/gris) ou #246c9a (bleu logo#2)*/
+/* #62929E (vert assez foncé) ; #546A7B (gris foncé)*/
+/*Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/5PPBeU*/
+/*Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/5q0oHO*/
+/*filter:opacity(60%);*/
+/*NOT RESPONSIVE YET...*/
+
+h3,
+ul,
+li,
+a,
+nav,
+header,
+img,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+.header {
+  background-color: transparent;
+}
+.nav {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+/* VERSION DU STYLE SI BUTTONS
+.list {
+  display: flex;
+  margin-left: 540px;
+  margin-top: 40px;
+  font-weight: lighter;
+}
+.list-item {
+  display: block;
+  height: 70px;
+  display: flex;
+  float: right;
+}
+.list-link {
+  display: inline-block;
+  text-align: center;
+  padding-left: 10px;
+  line-height: 2.5em;
+  color: #fff;
+  background-color: transparent;
+  transition: all 0.3s ease;
+} */
+
+.list {
+  display: block;
+  margin-left: 540px;
+  margin-top: 15px;
+}
+.list-item {
+  font-size: 16px;
+  font-weight: lighter;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  float: right;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #757575;
+  cursor: pointer;
+}
+.list-item:hover {
+  background-color: #62929E;
+  border-color: #62929E;
+}
+.list-link {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 2.5em;
+  color: #757575;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.list-link:hover {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+.logo-img {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.logo-wrapper {
+  width: 220px;
+  transition: all 0.3s ease;
+}
+.logo-wrapper img {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  color: #fff;
+}
+.logo-wrapper:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.open-menu {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  display: none;
+}
+.open-menu:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.menu {
+  width: 20px;
+  margin: 0 auto;
+  height: 30px;
+}
+.stripe {
+  max-width: 40px;
+  height: 1px;
+  display: block;
+  background-color: #000;
+  margin-top: 6px;
+}
+.open {
+  display: flex;
+  transform: translateY(0) !important;
+}
+@media screen and (max-width: 760px) {
+  .header {
+    border-bottom: 1px solid #000;
+  }
+  .list {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    transform: translateY(-300px);
+    transition: all 0.3s ease;
+  }
+  .list .list-item {
+    width: 100%;
+  }
+  .list-item {
+    border-style: none;
+  }
+  .list .list-link {
+    text-align: center;
+    line-height: 3em;
+    width: 100%;
+    border-top: 1px solid #000;
+  }
+  .logo-wrapper {
+    width: 160px;
+  }
+  .nav {
+    positon: relative;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .open-menu {
+    display: block;
+  }
+}
+
+/** HEADER **/
+
+.landing { 
+  text-align: center;
+  height: 100vh;
+  padding-top: 26vh;
+}
+
+/* CATCHPHRASE */
+
+.catchphrase {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 45px;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+  margin-bottom: 6vh;
+}
+
+/* SEARCHBAR */
+
+.search {
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+}
+
+.searchTerm {
+  width: 55%;
+  border: 1.5px solid #62929E;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  color: #62929E;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.searchTerm:focus{
+  color: #62929E;
+}
+
+.searchButton {
+  right: -2px;
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid #62929E;
+  background: #62929E;
+  text-align: center;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  top: 50%;
+  left: 50%;
+}
+
+/* MISSION CARDS */
+
+.card {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.details {
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+/***** FICHE MISSION *****/
+
+.fiche {
+  background-color: white;
+}
+
+
+
+
+/***** INSCRIPTION *****/

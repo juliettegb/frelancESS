@@ -1,0 +1,189 @@
+/***** HEADER *****/
+/* NAVBAR */
+/* #D3044D (fuschia foncé) et #DBE8E4/#D1E3DD (vert clair) et #2B816D (vert foncé) ou #3FC3A5 (vert punchy) ou #255176 (bleu/gris) ou #246c9a (bleu logo#2)*/
+/* #62929E (vert assez foncé) ; #546A7B (gris foncé)*/
+/*Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/5PPBeU*/
+/*Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/5q0oHO*/
+/*filter:opacity(60%);*/
+
+div,
+h3,
+ul,
+li,
+a,
+nav,
+header,
+img,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+.header {
+  background-color: #62929E;
+}
+.nav {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+.list {
+  display: flex;
+}
+.list-item {
+  display: block;
+  height: 60px;
+  padding-left: 40px;
+  width: 120px;
+  display: flex;
+  float: right;
+}
+.list-link {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  padding-left: 200px;
+  line-height: 2.5em;
+  color: #fff;
+  background-color: #62929E;
+  transition: all 0.3s ease;
+}
+.list-link:hover {
+  background-color: #62929E;
+  cursor: pointer;
+}
+.logo-wrapper {
+  width: 200px;
+  transition: all 0.3s ease;
+}
+.logo-wrapper img {
+  padding-left: 40px;
+  width: 100%;
+  color: #fff;
+}
+.logo-wrapper:hover {
+  background-color: #62929E;
+  cursor: pointer;
+}
+.open-menu {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  display: none;
+}
+.open-menu:hover {
+  background-color: #62929E;
+  cursor: pointer;
+}
+.menu {
+  width: 20px;
+  margin: 0 auto;
+  height: 30px;
+}
+.stripe {
+  max-width: 40px;
+  height: 1px;
+  display: block;
+  background-color: #000;
+  margin-top: 6px;
+}
+.open {
+  display: flex;
+  transform: translateY(0) !important;
+}
+@media screen and (max-width: 760px) {
+  .header {
+    border-bottom: 1px solid #000;
+  }
+  .list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #62929E;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    transform: translateY(-210px);
+    transition: all 0.3s ease;
+  }
+  .list .list-item {
+    width: 100%;
+  }
+  .list .list-link {
+    text-align: left;
+    padding-left: 40px;
+    line-height: 3em;
+    width: 100%;
+    border-top: 1px solid #000;
+  }
+  .logo-wrapper {
+    width: 120px;
+  }
+  .nav {
+    positon: relative;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .open-menu {
+    display: block;
+  }
+}
+
+
+/* VIDEO BACKGROUND */
+
+body {
+  margin: 0;
+  background: #000;
+}
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('../assets/home.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background:rgba(0,0,0,0.5);
+  padding: .5rem;
+  transition: .6s background;
+}
+a:hover{
+  background:rgba(0,0,0,0.9);
+}
+@media screen and (max-width: 500px) {
+  div{width:70%;}
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url('../assets/home.jpg') #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+.backgroundVideo {
+  background: fixed;
+}
