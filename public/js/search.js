@@ -1,9 +1,7 @@
-import React from 'react';
-import ReactBootstrap from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import { FormGroup } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
+var React    = require('react');
 var ReactDOM = require('react-dom');
+
+import { Button, FormGroup, FormControl } from 'reactstrap';
 
 class SearchBar extends React.Component {
   constructor() {

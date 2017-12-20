@@ -30,6 +30,7 @@ class Home extends React.Component {
       <div className="catchphrase">
         Des missions inspirantes, des freelances passionnés.
       </div>
+
       <SearchBar/>
     </div>
     </div>

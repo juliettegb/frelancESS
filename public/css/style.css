@@ -7,7 +7,7 @@ body {
   background: #000;
 }
 video {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -39,12 +39,10 @@ a {
   padding: .5rem;
   transition: .6s background;
 }
-a:hover{
-  background:rgba(0,0,0,0.9);
-}
+/*
 @media screen and (max-width: 500px) {
   div{width:70%;}
-}
+}*/
 @media screen and (max-device-width: 800px) {
   html { background: url('../assets/home.jpg') #000 no-repeat center center fixed; }
   #bgvid { display: none; }
@@ -61,6 +59,10 @@ a:hover{
 /*Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/5q0oHO*/
 /*filter:opacity(60%);*/
 /*NOT RESPONSIVE YET...*/
+
+.buttonNav:hover {
+  cursor: pointer;
+}
 
 h3,
 ul,
@@ -303,7 +305,7 @@ a {
 
 /* MISSION CARDS */
 
-.card {
+.bottomHome {
   margin-top: 40px;
   text-align: center;
 }
@@ -323,3 +325,10 @@ a {
 
 
 /***** INSCRIPTION *****/
+
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}

@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactBootstrap from 'react-bootstrap';
-import { Grid, Row, Col, Thumbnail, Button } from 'react-bootstrap';
+var React    = require('react');
 var ReactDOM = require('react-dom');
+import 'bootstrap/dist/css/bootstrap.css';
+import { Row, Col, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 class MissionCard extends React.Component {
   constructor() {
@@ -11,48 +11,58 @@ class MissionCard extends React.Component {
   render() {
 
     return (
-      <div className="bottomHome">
-      <Grid className="card">
+      <div className="bottomHome card">
+        <div className="container">
         <Row>
           <Col xs={6} md={3}>
-            <Thumbnail src="/assets/DD.png" alt="242x200">
-              <h3>Titre mission</h3>
-              <p>Description</p>
-              <p>
-                <Button bsStyle="primary" className="details" href="/mission">Détails</Button>
-              </p>
-            </Thumbnail>
+          <Card>
+            <CardImg top width="100%" src="/assets/DD.png" alt="Card image cap" />
+            <CardBody>
+              <CardTitle>Card title</CardTitle>
+              <CardSubtitle>Card subtitle</CardSubtitle>
+              <CardText>Some quick example text to build on the card title and make up the bulk of the content.</CardText>
+              <Button>Button</Button>
+            </CardBody>
+          </Card>
           </Col>
           <Col xs={6} md={3}>
-            <Thumbnail src="/assets/DD.png" alt="242x200">
-              <h3>Titre mission</h3>
-              <p>Description</p>
-              <p>
-                <Button bsStyle="primary" className="details" href="/mission">Détails</Button>
-              </p>
-            </Thumbnail>
+          <Card>
+            <CardImg top width="100%" src="/assets/DD.png" alt="Card image cap" />
+            <CardBody>
+              <CardTitle>Card title</CardTitle>
+              <CardSubtitle>Card subtitle</CardSubtitle>
+              <CardText>Some quick example text to build on the card title and make up the bulk of the content.</CardText>
+              <Button>Button</Button>
+            </CardBody>
+          </Card>
           </Col>
           <Col xs={6} md={3}>
-            <Thumbnail src="/assets/DD.png" alt="242x200">
-              <h3>Titre mission</h3>
-              <p>Description</p>
-              <p>
-                <Button bsStyle="primary" className="details" href="/mission">Détails</Button>
-              </p>
-            </Thumbnail>
+          <Card>
+            <CardImg top width="100%" src="/assets/DD.png" alt="Card image cap" />
+            <CardBody>
+              <CardTitle>Card title</CardTitle>
+              <CardSubtitle>Card subtitle</CardSubtitle>
+              <CardText>Some quick example text to build on the card title and make up the bulk of the content.</CardText>
+              <Button>Button</Button>
+            </CardBody>
+          </Card>
           </Col>
           <Col xs={6} md={3}>
-            <Thumbnail src="/assets/DD.png" alt="242x200">
-              <h3>Titre mission</h3>
-              <p>Description</p>
-              <p>
-                <Button bsStyle="primary" className="details" href="/mission">Détails</Button>
-              </p>
-            </Thumbnail>
+          <Card>
+            <CardImg top width="100%" src="/assets/DD.png" alt="Card image cap" />
+            <CardBody>
+              <CardTitle>Card title</CardTitle>
+              <CardSubtitle>Card subtitle</CardSubtitle>
+              <CardText>Some quick example text to build on the card title and make up the bulk of the content.</CardText>
+              <Button>Button</Button>
+            </CardBody>
+          </Card>
           </Col>
         </Row>
-      </Grid>
+        </div>
+
       </div>
+
     );
   };
 };
