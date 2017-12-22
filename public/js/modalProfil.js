@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-var FormInscriptionRedux = require('./formInscription.js');
+var FormInscription = require('./formInscription.js');
 
 class TriggerInscription extends React.Component {
 
@@ -30,7 +30,7 @@ class TriggerInscription extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Créer un profil</ModalHeader>
           <ModalBody>
-            <FormInscriptionRedux/>
+            <FormInscription/>
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}

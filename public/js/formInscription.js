@@ -1,5 +1,4 @@
 var React = require('react');
-var Field = require('redux-form').Field;
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 // class SimpleForm extends React.Component { const SimpleForm =
@@ -92,7 +91,4 @@ const FormInscription = props => {
   )
 }
 
-var reduxForm = require('redux-form').reduxForm;
-var FormInscriptionRedux = reduxForm({form: 'simple'})(FormInscription)
-
-module.exports = FormInscriptionRedux;
+module.exports = FormInscription;

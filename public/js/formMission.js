@@ -1,28 +1,74 @@
 var React = require('react');
-var Field = require('redux-form').Field;
+var connect = require ('react-redux').connect;
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-// class SimpleForm extends React.Component { const SimpleForm =
-// function(props){ }
+class FormMission extends React.Component {
+  constructor() {
+    super();
+    this.state= {
+      title:null,
+      email:null,
+      sector:null,
+      desc:null,
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChangeTitle = this.handleChangeTitle.bind(this);
+    this.handleChangeMail = this.handleChangeMail.bind(this);
+    this.handdleChangeSector = this.handdleChangeSector.bind(this);
+    this.handdleChangeDesc = this.handdleChangeDesc.bind(this);
+  }
 
-const FormMission = props => {
-  const {handleSubmit, pristine, reset, submitting} = props
-  return (
+  handleChangeTitle(e){
+    this.setState({title: e.target.value});
+    console.log(e.target.value);
+    console.log(this.state.title);
+  }
+  handleChangeMail(e){
+    this.setState({email: e.target.value});
+  }
+  handdleChangeSector(e){
+    this.setState({sector: e.target.value});
+  }
+  handdleChangeDesc(e){
+    this.setState({desc: e.target.value});
+  }
 
-    <Form onSubmit={handleSubmit}>
+  handleSubmit(event){
+    console.log(this.state);
+
+    //this.props.submitForm({title:this.state.title, mail:this.state.email, sector:this.state.sector, desc:this.state.desc});
+    event.preventDefault();
+    console.log(this.state.title);
+    var formData = new FormData ();
+    formData.append("title", this.state.title);
+    formData.append("email", this.state.email);
+    formData.append("sector", this.state.sector);
+    formData.append("desc", this.state.desc);
+    console.log(formData);
+    fetch("/add", {
+      method: "post",
+      body: formData
+    })
+  }
+
+  render() {
+    console.log(this.state)
+    return (
+
+    <Form onSubmit={this.handleSubmit}>
       <FormGroup>
         <Label for="titre-mission">Titre de la mission</Label>
-        <Input type="textarea" name="text" id="titre-mission" placeholder="Pour quelle mission avez-vous besoin d'un fr'ESS?" />
+        <Input onChange={this.handleChangeTitle} type="textarea" name="text" id="titre-mission" placeholder="Pour quelle mission avez-vous besoin d'un fr'ESS?" />
       </FormGroup>
 
       <FormGroup>
         <Label for="email">Email</Label>
-        <Input type="email" name="email" id="email" placeholder="Votre email.." />
+        <Input onChange={this.handleChangeMail} type="email" name="email" id="email" placeholder="Votre email.." />
       </FormGroup>
 
       <FormGroup>
         <Label for="select">Which battle do you fight?</Label>
-        <Input type="select" name="select" id="selectSecteur">
+        <Input onChange={this.handleChangeSector} type="select" name="select" id="selectSecteur">
           <option>Lutte contre la précarité</option>
           <option>Réfugiés</option>
           <option>Accompagnement du handicap</option>
@@ -112,16 +158,27 @@ const FormMission = props => {
 
       <FormGroup>
         <Label for="description">Description de l&rsquo;offre</Label>
-        <Input type="textarea" name="text" id="description" />
+        <Input onChange={this.handleChangeDesc} type="textarea" name="text" id="description" />
       </FormGroup>
 
       <Button>Submit</Button>
 
     </Form>
-  )
+    )
+  }
 }
 
-var reduxForm = require('redux-form').reduxForm;
-var FormMissionRedux = reduxForm({form: 'newsimple'})(FormMission)
+function mapDispatchToProps(dispatch) {
+  return {
+    submitForm: function(data) {
+        dispatch( {type: 'submitForm'}, title:data.title, email:data.email, sector:data.sector, desc:data.desc)
+    }
+  }
+}
+
+var FormMissionRedux = connect(
+    null,
+    mapDispatchToProps
+)(FormMission);
 
 module.exports = FormMissionRedux;
